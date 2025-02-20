@@ -1,0 +1,230 @@
+/* General styling for the home section */
+.home {
+    background-color: rgb(244,168,150); /* Light background color */
+    display: flex; /* Use flexbox for layout */
+    position: relative; /* Positioning context for absolutely positioned elements */
+    height: 350px; /* Set height of the section */
+    margin-top: 50px; /* Space above the section */
+    max-width: 1060px; /* Limit the maximum width */
+    margin: auto; /* Center the section horizontally */
+    border: 8px solid rgb(39,54,49); /* Dark border around the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin-top: 25px; /* Additional top margin */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the image within the home section */
+.jimmy {
+    height: 300px; /* Fixed height for the image */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Positioning and layout of the image container */
+.Image {
+    position: absolute; /* Absolutely position the image */
+    right: 10px; /* Position the image 10px from the right */
+    top: 20px; /* Position the image 20px from the top */
+}
+
+/* Styling for the first line of text in the home section */
+.line1 {
+    color: rgb(53,133,151); /* Text color */
+    font-size: 39px; /* Font size */
+    line-height: 1px; /* Line height set to 1 */
+}
+
+/* Styling for the second line of text in the home section */
+.line2 {
+    color: rgb(53,133,151); /* Text color */
+    font-size: 50px; /* Font size */
+}
+
+/* Styling for the third line of text in the home section */
+.line3 {
+    color: rgb(53,133,151); /* Text color */
+    font-size: 30px; /* Font size */
+}
+
+/* Left padding for the container of the text */
+.Iam {
+    padding-left: 45px; /* Adds left padding */
+}
+
+/* Bottom section styling, used for Hire Me and Resume buttons */
+.bottom {
+    display: flex; /* Flexbox for layout */
+    margin-bottom: 50px; /* Margin at the bottom */
+    background-color: rgb(244,168,150); /* Light background */
+    max-width: 1060px; /* Limit the maximum width */
+    margin: auto; /* Center the section horizontally */
+    border: 8px solid rgb(39,54,49); /* Dark border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the Hire Me section */
+.hireme {
+    display: flex; /* Flexbox layout */
+    flex: 1; /* Allow Hire Me section to take available space */
+    background-color: rgb(55,95,69); /* Dark green background */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: 8px solid rgb(39,54,49); /* Dark border */
+}
+
+/* Styling for the Hire Me icon */
+.hiremeicon {
+    height: 50px; /* Set icon size */
+    border-radius: 34px; /* Rounded icon */
+    left: 150px; /* Position icon to the left */
+    margin-right: 5px; /* Space to the right of the icon */
+}
+
+/* Transitions for buttons on hover (for smooth effect) */
+.hireme, .resume {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for background color and transform */
+}
+
+/* Hover effects for Hire Me and Resume buttons */
+.hireme:hover, .resume:hover {
+    background-color: rgb(39, 80, 60); /* Darken background color on hover */
+    transform: scale(1.05); /* Slight grow effect */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Transitions for icons on hover */
+.hiremeicon, .downloadicon {
+    transition: transform 0.2s ease; /* Smooth transition for transform */
+}
+
+/* Rotate icons on hover for fun effect */
+.hiremeicon:hover, .downloadicon:hover {
+    transform: rotate(10deg); /* Fun rotation effect */
+}
+
+/* Styling for the Resume button section */
+.resume {
+    display: flex; /* Flexbox layout */
+    flex: 1; /* Allow Resume section to take available space */
+    background-color: rgb(55,95,69); /* Dark green background */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: 8px solid rgb(39,54,49); /* Dark border */
+}
+
+/* Styling for the Download icon */
+.downloadicon {
+    height: 50px; /* Set icon size */
+    left: 150px; /* Position icon to the left */
+}
+
+/* Media query for mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse; /* Stack image above text */
+        align-items: center; /* Center align content */
+        height: auto; /* Remove fixed height */
+        padding: 20px; /* Add padding */
+    }
+
+    .Image {
+        position: static; /* Remove absolute positioning */
+        margin-bottom: 15px; /* Space below the image */
+        text-align: center; /* Center the image */
+    }
+
+    .jimmy {
+        height: 220px; /* Smaller image for mobile */
+        width: auto; /* Auto width for scaling */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    .Iam {
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center align text */
+    }
+}
+
+/* Additional adjustments for mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .bottom {
+        flex-direction: column; /* Stack the buttons vertically */
+        margin-bottom: 30px; /* Reduced bottom margin */
+    }
+
+    .hireme, .resume {
+        width: 100%; /* Full width for buttons */
+    }
+
+    .hiremeicon, .downloadicon {
+        height: 40px; /* Smaller icon size for mobile */
+    }
+}
+
+/* Media query for specific medium-sized screens (max-width: 964px and max-height: 504px) */
+@media (max-width: 964px) and (max-height: 504px) {
+    /* Sidebar adjustments for medium screens */
+    .sidebar {
+        width: 180px; /* Smaller sidebar */
+    }
+
+    /* Content area adjustments */
+    .content {
+        margin-left: 190px; /* Adjust content position to match sidebar */
+    }
+
+    /* Home section layout for smaller screens */
+    .home {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Remove fixed height */
+        padding: 15px; /* Add padding */
+        text-align: center; /* Center the text */
+    }
+
+    .Iam {
+        padding-left: 0; /* Remove padding */
+    }
+
+    .line1 {
+        font-size: 30px; /* Smaller font size */
+    }
+
+    .line2 {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .line3 {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    .Image {
+        position: static; /* Remove positioning */
+        margin-top: 20px; /* Add margin above the image */
+    }
+
+    .jimmy {
+        height: 250px; /* Smaller image size */
+        width: auto; /* Auto width for scaling */
+        border-radius: 8px; /* Rounded corners */
+    }
+
+    /* Resume and Hire Me buttons stack vertically */
+    .bottom {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .hireme,
+    .resume {
+        width: 100%; /* Full width for buttons */
+        margin-top: 10px; /* Margin above buttons */
+    }
+
+    /* Profile section adjustments */
+    .sidebar-header img {
+        width: 70px; /* Smaller profile picture */
+    }
+
+    .nav-links li {
+        padding: 12px 15px; /* Adjust padding for navigation links */
+    }
+}

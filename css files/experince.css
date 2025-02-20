@@ -1,0 +1,166 @@
+/* General styling for the experience section */
+.experience-section {
+    max-width: 1000px; /* Limits the maximum width of the section */
+    margin: auto; /* Centers the section horizontally */
+    border: 8px solid rgb(244,168,150); /* Light border around the section */
+    padding: 30px; /* Adds padding inside the section */
+    background-color: white; /* White background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin-top: 25px; /* Adds top margin */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the title of the experience section */
+.experience-title {
+    font-size: 36px; /* Large font size for the title */
+    font-weight: bold; /* Makes the title bold */
+    color: rgb(39,54,49); /* Dark color for the title */
+}
+
+/* Underline decoration for the title */
+.title-underline {
+    width: 50px; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: rgb(244,168,150); /* Same color as the border */
+    margin-top: 5px; /* Small space above the underline */
+    margin-bottom: 30px; /* Large space below the underline */
+}
+
+/* Styling for the container holding the experience items */
+.experience-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px; /* Space between the grid items */
+}
+
+/* Styling for each individual experience item */
+.experience-item {
+    position: relative; /* Allows absolute positioning of the bullet point */
+    padding-left: 30px; /* Left padding for spacing */
+    border-left: 2px solid rgb(244,168,150); /* Light-colored left border */
+}
+
+/* Bullet point before each experience item */
+.experience-item::before {
+    content: ''; /* Empty content for the bullet */
+    position: absolute; /* Position it absolutely within the item */
+    left: -8px; /* Position it slightly to the left */
+    top: 0; /* Align it to the top of the item */
+    width: 12px; /* Set the width of the bullet */
+    height: 12px; /* Set the height of the bullet */
+    background-color: rgb(244,168,150); /* Match the color of the border */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Styling for the experience date */
+.experience-date {
+    font-size: 14px; /* Smaller font size for the date */
+    color: rgb(53,133,151); /* Lighter color for the date */
+    margin-bottom: 8px; /* Space below the date */
+}
+
+/* Styling for the experience company title */
+.experience-company {
+    font-size: 20px; /* Larger font size for the company name */
+    font-weight: bold; /* Bold for emphasis */
+    color: rgb(39,54,49); /* Dark color for the company name */
+}
+
+/* Styling for the experience location */
+.experience-location {
+    font-style: italic; /* Italic style for the location */
+    font-size: 14px; /* Smaller font size */
+    color: rgb(53,133,151); /* Lighter color for the location */
+    margin-bottom: 6px; /* Space below the location */
+}
+
+/* Styling for the experience role */
+.experience-role {
+    font-weight: bold; /* Bold for the role title */
+    font-size: 16px; /* Regular font size for the role */
+    color: rgb(39,54,49); /* Dark color for the role */
+    margin-bottom: 10px; /* Space below the role */
+}
+
+/* Styling for the description of each experience item */
+.experience-description {
+    font-size: 15px; /* Regular font size for the description */
+    color: rgb(55,95,69); /* Dark green color for the description */
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+/* Media query for small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust the grid to a single column for mobile screens */
+    .experience-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* Media query for medium screens (max-width: 964px and max-height: 504px) */
+@media (max-width: 964px) and (max-height: 504px) {
+    /* Sidebar adjustments */
+    .sidebar {
+      width: 180px; /* Slightly smaller for medium screens */
+    }
+  
+    /* Content area adjustments */
+    .content {
+      margin-left: 190px; /* Adjust to match the resized sidebar */
+    }
+  
+    /* Home section layout */
+    .home {
+      flex-direction: column; /* Stack the elements vertically */
+      height: auto; /* Auto height */
+      padding: 15px;
+      text-align: center; /* Center text */
+    }
+  
+    .Iam {
+      padding-left: 0; /* Remove extra padding on the left */
+    }
+  
+    .line1 {
+      font-size: 30px; /* Adjust font size for smaller screens */
+    }
+  
+    .line2 {
+      font-size: 40px; /* Adjust font size for smaller screens */
+    }
+  
+    .line3 {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .Image {
+      position: static; /* Remove absolute positioning */
+      margin-top: 20px; /* Adjust spacing */
+    }
+  
+    .jimmy {
+      height: 250px; /* Adjust image size */
+      width: auto;
+      border-radius: 8px; /* Round corners */
+    }
+  
+    /* Resume and Hire Me buttons */
+    .bottom {
+      flex-direction: column; /* Stack buttons vertically */
+    }
+  
+    .hireme,
+    .resume {
+      width: 100%; /* Make buttons full width */
+      margin-top: 10px; /* Add spacing between buttons */
+    }
+  
+    /* Profile section below the image */
+    .sidebar-header img {
+      width: 70px; /* Slightly smaller profile picture */
+    }
+  
+    .nav-links li {
+      padding: 12px 15px; /* Adjust padding for nav items */
+    }
+}

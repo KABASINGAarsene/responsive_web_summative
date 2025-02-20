@@ -1,0 +1,83 @@
+/* General styling for the education section */
+.education-section {
+    max-width: 1000px; /* Limits the maximum width of the section */
+    margin: auto; /* Centers the section horizontally */
+    border: 8px solid rgb(244,168,150); /* Light border around the section */
+    padding: 30px; /* Adds padding inside the section */
+    background-color: white; /* White background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin-top: 25px; /* Adds top margin */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the title of the education section */
+.education-title {
+    font-size: 36px; /* Large font size for the title */
+    font-weight: bold; /* Makes the title bold */
+    color: rgb(39,54,49); /* Dark color for the title */
+}
+
+/* Underline decoration for the title */
+.title-underline {
+    width: 50px; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: rgb(244,168,150); /* Same color as the border */
+    margin-top: 5px; /* Small space above the underline */
+    margin-bottom: 30px; /* Large space below the underline */
+}
+
+/* Styling for the container holding the education items */
+.education-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px; /* Space between the grid items */
+}
+
+/* Styling for each individual education item */
+.education-item {
+    position: relative; /* Allows absolute positioning of the bullet point */
+    padding-left: 30px; /* Left padding for spacing */
+    border-left: 2px solid rgb(244,168,150); /* Light-colored left border */
+}
+
+/* Bullet point before each education item */
+.education-item::before {
+    content: ''; /* Empty content for the bullet */
+    position: absolute; /* Position it absolutely within the item */
+    left: -8px; /* Position it slightly to the left */
+    top: 0; /* Align it to the top of the item */
+    width: 12px; /* Set the width of the bullet */
+    height: 12px; /* Set the height of the bullet */
+    background-color: rgb(244,168,150); /* Match the color of the border */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Styling for the education date */
+.education-date {
+    font-size: 14px; /* Smaller font size for the date */
+    color: rgb(53,133,151); /* Lighter color for the date */
+    margin-bottom: 10px; /* Space below the date */
+}
+
+/* Styling for the education degree title */
+.education-degree {
+    font-size: 20px; /* Larger font size for the degree title */
+    font-weight: bold; /* Bold for emphasis */
+    color: rgb(39,54,49); /* Dark color for the degree title */
+    margin-bottom: 10px; /* Space below the degree title */
+}
+
+/* Styling for the description of each education item */
+.education-description {
+    font-size: 16px; /* Regular font size for the description */
+    color: rgb(55,95,69); /* Dark green color for the description */
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+/* Media query for small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust the grid to a single column for mobile screens */
+    .education-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}

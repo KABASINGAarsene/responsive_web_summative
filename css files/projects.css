@@ -1,0 +1,103 @@
+/* Styling for the entire projects section */
+.projects-section {
+    padding: 4rem 2rem; /* Padding around the section */
+    background-color: rgb(244,168,150); /* Background color for the section */
+    text-align: center; /* Centers text horizontally */
+    margin-top: 25px; /* Space above the section */
+    border: 8px solid white; /* White border around the section */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the title of the section */
+.section-title {
+    font-size: 2rem; /* Font size for the title */
+    color: rgb(39,100,115); /* Color of the title */
+    margin-bottom: 2rem; /* Space below the title */
+}
+
+/* Container for all project items, using grid layout */
+.projects-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem; /* Space between grid items */
+}
+
+/* Styling for each individual project item */
+.project-item {
+    display: flex; /* Flexbox for aligning content */
+    align-items: flex-start; /* Align items to the top */
+    background-color: white; /* White background for project item */
+    border-radius: 1rem; /* Rounded corners for each item */
+    padding: 1.5rem; /* Padding inside each project item */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+/* Styling for the timeline of the project */
+.project-timeline {
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the timeline items */
+    margin-right: 1rem; /* Right margin for spacing */
+}
+
+/* Styling for the dot in the timeline */
+.dot {
+    width: 14px; /* Width of the dot */
+    height: 14px; /* Height of the dot */
+    background-color: rgb(244,168,150); /* Color of the dot */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Styling for the line in the timeline */
+.line {
+    width: 2px; /* Width of the line */
+    height: 100%; /* Full height of the timeline */
+    background-color: rgb(244,168,150); /* Color of the line */
+}
+
+/* Styling for the project details section */
+.project-details {
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for the project dates */
+.project-dates {
+    font-size: 0.9rem; /* Smaller font size for the dates */
+    color: rgb(39,100,115); /* Color for the dates */
+    margin-bottom: 0.3rem; /* Space below the dates */
+}
+
+/* Styling for the project title */
+.project-title {
+    font-size: 1.3rem; /* Font size for the title */
+    font-weight: bold; /* Bold for emphasis */
+    color: rgb(39,100,115); /* Title color */
+    margin: 0.3rem 0; /* Margin around the title */
+}
+
+/* Styling for the project location */
+.project-location {
+    font-style: italic; /* Italic style for the location */
+    font-size: 0.9rem; /* Smaller font size */
+    color: rgb(100, 100, 100); /* Gray color for the location */
+}
+
+/* Styling for the project role */
+.project-role {
+    font-weight: bold; /* Bold for the role */
+    margin: 0.3rem 0; /* Margin around the role */
+}
+
+/* Styling for the project description */
+.project-description {
+    font-size: 0.95rem; /* Font size for the description */
+    color: rgb(60,60,60); /* Dark gray color for the description */
+}
+
+/* Media query for small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust the grid to a single column for mobile screens */
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}

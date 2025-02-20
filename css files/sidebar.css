@@ -1,0 +1,128 @@
+/* Color Palette */
+:root {
+  --peach: rgb(244, 168, 150); /* Peach color used throughout */
+  --white: #ffffff; /* White color */
+  --teal: rgb(39, 100, 115); /* Teal color for sidebar */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed; /* Fixed position for the sidebar */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 220px; /* Sidebar width */
+  height: 100vh; /* Full viewport height */
+  background-color: var(--teal); /* Set background color to teal */
+  color: var(--white); /* Set text color to white */
+  padding-top: 20px; /* Padding on the top */
+  transition: transform 0.3s ease; /* Smooth transition for transform effect */
+}
+
+.sidebar-header {
+  text-align: center; /* Center the header content */
+  margin-bottom: 15px; /* Margin below the header */
+  padding: 10px; /* Padding inside the header */
+  background-color: var(--peach); /* Set background color to peach */
+  border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
+}
+
+.sidebar-header img {
+  width: 85px; /* Set the width of the image */
+  border-radius: 50%; /* Circular shape for the image */
+  border: 3px solid var(--white); /* White border around the image */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.nav-links li {
+  padding: 14px 20px; /* Padding inside each list item */
+}
+
+.nav-links a {
+  color: var(--white); /* White color for the links */
+  text-decoration: none; /* Remove underline from links */
+  display: flex; /* Use flexbox for the link */
+  align-items: center; /* Align the items in the link */
+  font-size: 16px; /* Font size for the links */
+  transition: background-color 0.2s ease; /* Smooth transition for background color */
+}
+
+.nav-links a i {
+  margin-right: 10px; /* Space between the icon and text */
+}
+
+.nav-links a:hover {
+  background-color: var(--peach); /* Change background on hover */
+  border-radius: 8px; /* Rounded corners on hover */
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  position: absolute; /* Position at the bottom */
+  bottom: 20px; /* 20px from the bottom */
+  width: 100%; /* Full width */
+  text-align: center; /* Center the footer content */
+}
+
+.sidebar-footer a {
+  color: var(--peach); /* Peach color for footer links */
+  background-color: var(--white); /* White background for footer links */
+  padding: 8px; /* Padding inside the links */
+  margin: 0 6px; /* Margin on the left and right */
+  border-radius: 50%; /* Circular shape */
+  font-size: 18px; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.sidebar-footer a:hover {
+  background-color: var(--peach); /* Peach background on hover */
+  color: var(--white); /* Change text color to white on hover */
+}
+
+/* Toggle Button */
+.toggle-btn {
+  display: none; /* Initially hide the toggle button */
+  position: fixed; /* Fixed position */
+  top: 15px; /* 15px from the top */
+  left: 15px; /* 15px from the left */
+  background-color: var(--teal); /* Teal background */
+  color: var(--white); /* White text color */
+  padding: 10px 12px; /* Padding inside the button */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 1000; /* Ensure the button is above other content */
+}
+
+/* Main Content */
+.content {
+  margin-left: 230px; /* Space for the sidebar on the left */
+  padding: 20px; /* Padding inside the content */
+  background-color: var(--white); /* White background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* For smaller screens, hide the sidebar */
+  .sidebar {
+    transform: translateX(-100%); /* Move sidebar out of view */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* Bring the sidebar back into view */
+  }
+
+  /* Show the toggle button on smaller screens */
+  .toggle-btn {
+    display: block; /* Make the button visible */
+  }
+
+  /* Remove the left margin from content when the sidebar is hidden */
+  .content {
+    margin-left: 0;
+  }
+}
